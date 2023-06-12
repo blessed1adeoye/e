@@ -1,0 +1,19 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <p>Are You Sure You Want to delete "{{ttk}}"? </p>
+
+    <form action="{% url 'ews_app:token-delete' ttk.id %}"  method="POST">
+        {% csrf_token %}
+        <a class="btn btn-success mr-15" href="{% url 'ews_app:token'  %}">Cancel</a>
+
+        <input class="btn btn-danger" type="submit" value="DELETE">
+    </form>
+
+</main>
+
+
+{% endblock content %}

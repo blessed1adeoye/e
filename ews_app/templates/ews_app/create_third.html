@@ -1,0 +1,61 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>THIRD SECTION</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+          <li class="breadcrumb-item">COMPONENTS</li>
+          <li class="breadcrumb-item active">Third Section</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-8">
+                {% if i in messages %}
+                    {{ i }}
+                {% endif %}
+                {% if user.is_authenticated %}
+                <h4 class="text-center" style="color: blue; font-weight: 700;"> Add THIRD SECTION with IMAGE to Database</h4>
+
+                    <br><br>
+                    {% if submitted %}
+                        The THIRD SECTION was submitted Successfully
+                    {% else %}
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row mb-3">
+                              <label for="" class="col-sm-2 col-form-label">TITLE</label>
+                              <div class="col-sm-10">
+                                <input type="text" name="title" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="" class="col-sm-2 col-form-label">File Upload</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="img" type="file" id="formFile" required>
+                              </div>
+                            </div>
+
+                        <center> <input type="submit" class="btn btn-success col-6 " value="SUBMIT"></center>
+                        </form>
+                        <hr>
+                        <br><br><br>
+                        <hr>
+                    {% endif %}
+                {% else %}
+                <p>You are not allowed here</p>
+            </div>
+        {% endif %}
+        </div>
+
+    </section>
+</main>
+
+
+{% endblock content %}

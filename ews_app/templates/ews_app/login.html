@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<center>
+    <div class="col-md-6 offset-md-3">
+        <h3 style="color:gold"> You have Already Logged in</h3>
+        <a href="{% url 'ews_app:ad-hm' %}"><i style="color:gold" class="fa fa-users"></i></a>
+    </div>
+</center>
+
+
+{% else %}
+    <div class="col-md-6 offset-md-3">
+        <h1 style="color: #0d6efd;" class="text-center"><i class="fa-solid fa-right-to-bracket"></i> LOGIN</h1><br>
+        <form method="POST" action="{% url 'ews_app:login' %}">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <input type="text" class="form-control" name="username" placeholder="Enter your Username">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="Enter your Password">
+            </div>
+            <center><button type="submit" class="btn btn-primary col-md-6 text-center"><i class="fa-solid fa-right-to-bracket"></i> LOGIN </button></center>
+        </form>
+    </div>
+
+{% endif %}
+
+
+
+{% endblock content %}

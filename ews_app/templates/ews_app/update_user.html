@@ -1,0 +1,22 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+    <h1 style="color: #0d6efd;" class="text-center"><i class="fa-solid fa-users"></i> UPDATE My PROFILE</h1><br>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        <br>
+        {{ profile_form.as_p }}
+        <br><br>
+            <center>
+                <button type="submit" class="btn btn-primary col-md-6 text-center">Submit</button>
+            </center>
+    </form>
+    <br>
+</div>
+
+
+
+{% endblock content %}

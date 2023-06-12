@@ -1,0 +1,54 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+
+  <div class="pagetitle">
+    <h1>TOKENOMICS</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+        <li class="breadcrumb-item">COMPONENTS</li>
+        <li class="breadcrumb-item active">TOKENOMICS</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+        {% for x in a %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">{{x.title}}</h5>
+            <p>{{x.speech}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'ews_app:edit-token' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+
+                    <a href="{% url 'ews_app:token-delete' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}        
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create-token' %}"> CREATE ONE</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% endblock content %}

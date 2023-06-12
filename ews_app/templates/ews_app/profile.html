@@ -1,0 +1,48 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+{% if profile %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-8">
+                <h1 style="color:gold;">{{ profile.user.username }}'s  Profile</h1>
+                <p>{{profile.user.firstname}}</p>
+                <p>{{profile.user.lastname}}</p>
+                    <div class="alert alert-dark" role="alert">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    {% if profile.profile_image %}
+                                        <img src="{{ profile.profile_image.url }}" width="50" height="50" class=" rounded-circle" alt="{{ profile.user.username }}">
+                                    {% else %}
+                                        <img src="{% static 'images/78.png' %}" class="img-fluid rounded-start">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-4">
+                <br><br><br><br>
+                {% if profile.profile_image %}
+                    <img class="rounded-circle" width="200" src="{{profile.profile_image.url}} ">
+                    <br><br>
+                {% endif %}
+                 <br>
+                 <hr>
+
+
+                <br>
+                <!-- CHECK FOR THE CORRECT USER -->
+                 {% if request.user.id == profile.user.id %}
+                    <a href="{% url 'ews_app:update_user' %}" class="btn btn-outline-success col-8"><strong>UPDATE PROFILE</strong></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+{% endif %}
+
+{% endblock content %}
+

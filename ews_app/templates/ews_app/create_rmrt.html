@@ -1,0 +1,99 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>CREATE ROADMAP</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+          <li class="breadcrumb-item">COMPONENTS</li>
+          <li class="breadcrumb-item active">CREATE ROADMAP</li>
+        </ol>
+      </nav>
+    </div>
+
+   <section class="section">
+        <div class="row">
+                {% if i in messages %}
+                    {{ i }}
+                {% endif %}
+                {% if user.is_authenticated %}
+                <h4 class="text-center" style="color: blue; font-weight: 700;"> Add ROADMAP  to Database</h4>
+
+                    <br><br>
+                    {% if submitted %}
+                        The ROADMAP was submitted Successfully
+                    {% else %}
+                        <div class="col-lg-10">
+                            <h5 class="text-center" style="color: magenta; font-weight: 700;"> ROADMAP RIGHT TWO </h5>
+                          <form action="" method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                               <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">Quarter</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrQR" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">YEAR</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrYR" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrhone" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrh_two" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrh_three" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrh_four" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrh_five" class="form-control" >
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <label for="" class="col-sm-2 col-form-label">H4</label>
+                                <div class="col-sm-10">
+                                  <input type="text" name="rmrh_six" class="form-control">
+                                </div>
+                              </div>
+                            <center> <input type="submit" class="btn btn-success col-6 " value="SUBMIT"></center>
+                          </form>
+                        </div>
+                        <br><br><br>
+                    {% endif %}
+                {% else %}
+                <p>You are not allowed here</p>
+
+        {% endif %}
+        </div>
+
+    </section>
+</main>
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12  col-md-12 col-lg-7">
+                <div class="intro-text">
+                    {% for x in w %}
+                    <h1>{{x.wel_title}}</h1>
+                    <p>{{x.wel_speech}}</p>
+                    {% endfor %}
+                    {% for x in document %}
+<!--                    <a href="{{x.document.url}}" class="btn btn-default btn-default-style intro_active_3 intro_btn_3">White Paper</a>-->
+                    <a target="_blank" href="{{x.document.url}}" class="btn btn-default btn-default-style intro_active_3 intro_btn_3">White Paper</a>
+					<a href="#" class="btn btn-default btn-default-style intro_btn_3"> App Coming Soon .....</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-5 img-wrapper">
+                <div class="intro-img">
+                    <img src="{% static './images/banner-vector.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<section id="benefits">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    {% for x in hss %}
+                        <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">{{x.title}}</h2>
+                        <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">{{x.speech}}.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for x in ht %}
+            <div class="col-sm-12 col-md-6 col-lg-3 benefits-single-item wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+
+                <div class="benefits-single-wrapper">
+                    <div class="benefits-img">
+                        <img src="{{x.img.url}}" width="110" height="110">
+                    </div>
+                    <h4>{{x.title}}</h4>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock content %}

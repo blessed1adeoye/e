@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="benefits">
+  <div class="container">
+    <div id="about_cryptonic" class="about_cryptonic">
+        <div class="about-img">
+            <div class="img-wrapper  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                 <img src="{% static './images/about.png' %}" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row  justify-content-end">
+				<div class="col-sm-12 col-md-8 col-lg-6 padding-none">
+					<div class="about_cryptonic-content">
+						<h6 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s"><span></span>ABOUT ELITE WHALES TOKEN</h6>
+                        <br>
+                        {% for x in about %}
+                            <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">{{x.h2}}</h2>
+                            <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">{{x.p1}}.</p>
+                            <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">{{x.p2}}.</p>
+                            <a href="{{x.document.url}}" class="btn btn-default btn-default-style wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">DOWNLOAD WHITEPAPER</a>
+                        {% endfor %}
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+
+{% endblock content %}

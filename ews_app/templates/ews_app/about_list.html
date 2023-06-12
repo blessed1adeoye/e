@@ -1,0 +1,57 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+
+  <div class="pagetitle">
+    <h1>ABOUT Speech</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+        <li class="breadcrumb-item">COMPONENTS</li>
+        <li class="breadcrumb-item active">ABOUT Speech</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+        {% for x in abt %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">{{x.h2}}</h5>
+            <p>{{x.p1}}</p>
+            <p>{{x.p2}}</p>
+            <p><a target="_blank" href="{{x.document.url}}" class="button alert">DOWNLOAD</a></p>
+
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+            
+                    <a href="{% url 'ews_app:edit-about' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+                
+                    <a href="{% url 'ews_app:delete-about' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create-about' %}"> CREATE ONE</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>    
+
+</main>
+
+{% endblock content %}

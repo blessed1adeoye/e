@@ -1,0 +1,33 @@
+{% load static %}
+<header id="header" class="header header-01" style="font-family: Cursive">
+    <!-- START Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-faded cripto_nav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" data-scroll href="/" style="color:white;"><img style="background-color:white;" src="{% static './images/logos.png' %}" width="100px" height="50" alt="logo">ELITE WHALES</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:index' %}" class="nav-link {% if nav == 'index' %} active {% endif %}">HOME</a></li>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:about' %}" class="nav-link {% if nav == 'about' %} active {% endif %}">ABOUT</a></li>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:ts' %}" class="nav-link {% if nav == 'ts' %} active {% endif %}">TOKEN SALE</a></li>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:road' %}" class="nav-link {% if nav == 'road' %} active {% endif %}">ROADMAP</a></l>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:faq' %}" class="nav-link {% if nav == 'faq' %} active {% endif %}">FAQ</a></li>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:contact' %}" class="nav-link {% if nav == 'contact' %} active {% endif %}">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="language">
+                <a href="https://pancakeswap.finance/swap?outputCurrency=0x0E506B6B0a48696133C9e3C8575342CE2b5Bd527" target="_blank" class="token">Buy token</a>
+<!--                <div class="dropdown"><span>Eng<i class="fas fa-chevron-down"></i></span>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li><a class="dropdown-item" href="blog.html">Deutsch</a></li>-->
+<!--                        <li><a class="dropdown-item" href="blog-post.html">Español</a></li>-->
+<!--                        <li><a class="dropdown-item" href="shop.html">Spanish</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </nav><!-- END Navbar -->
+    <div id="particles-jsi3" class="particles"></div>

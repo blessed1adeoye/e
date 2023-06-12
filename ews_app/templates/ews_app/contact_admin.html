@@ -1,0 +1,47 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+
+  <div class="pagetitle">
+    <h1>ABOUT Speech</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+        <li class="breadcrumb-item">COMPONENTS</li>
+        <li class="breadcrumb-item active">ABOUT Speech</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-10">
+        {% for x in cont %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">Name: {{x.name}}</h5>
+            <p>Email: {{x.email}}</p>
+            <p>Subject: {{x.subject}}</p>
+            <p>Date: {{x.date}}</p>
+            <p>Message: {{x.message}}</p>
+
+
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+                    <a href="{% url 'ews_app:delete-contact' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>    
+
+</main>
+
+{% endblock content %}

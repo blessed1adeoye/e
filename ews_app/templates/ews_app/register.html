@@ -1,0 +1,20 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <h1 style="color: #0d6efd;" class="text-center"><i class="fa-solid fa-right-to-bracket"></i> REGISTER</h1><br>
+    <form method="POST" action="{% url 'ews_app:register' %}">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <br>
+<!--          Already a Member? <a href="{% url 'ews_app:login' %}"> Login</a> Here-->
+        <br><br>
+            <center><button type="submit" class="btn btn-primary col-md-6 text-center">SIGN UP</button></center>
+
+    </form>
+    <br>
+</div>
+
+{% endblock content %}

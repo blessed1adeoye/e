@@ -1,0 +1,49 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Welcome Speech</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+          <li class="breadcrumb-item">COMPONENTS</li>
+          <li class="breadcrumb-item active">Welcome Speech</li>
+        </ol>
+      </nav>
+    </div>
+    
+    <section class="section">
+        <div class="row">
+            <div class="col-8">
+                {% if i in messages %}
+                    {{ i }}
+                {% endif %}
+                {% if user.is_authenticated %}
+                <h4 class="text-center" style="color: blue; font-weight: 700;"> Add Welcome Speech to Database</h4>
+                
+                    <br><br>
+                    {% if submitted %}
+                        The Match Venue was submitted Successfully
+                    {% else %}                
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                        <center> <input type="submit" class="btn btn-success col-6 " value="SUBMIT"></center>
+                        </form>
+                        <hr>
+                        <br><br><br>
+                        <hr>
+                    {% endif %}
+                {% else %}  
+                <p>You are not allowed here</p>      
+            </div>
+        {% endif %}
+        </div>
+    </section>
+</main>
+
+
+{% endblock content %}

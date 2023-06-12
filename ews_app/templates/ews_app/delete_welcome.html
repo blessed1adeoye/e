@@ -1,0 +1,19 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <p>Are You Sure You Want to delete "{{item}}"? </p>
+
+    <form action="{% url 'ews_app:delete_welcome' item.id %}"  method="POST">
+        {% csrf_token %}
+        <a class="btn btn-success mr-15" href="{% url 'ews_app:wl'  %}">Cancel</a>
+
+        <input class="btn btn-danger" type="submit" value="DELETE">
+    </form>
+
+</main>
+
+
+{% endblock content %}

@@ -1,0 +1,713 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Cryptocurrency Landing Page HTML5 Template">
+    <meta name="keywords" content="Cryptocurrency, bitcoin, bitcoin landing, blockchain, crypto trading ">
+    <meta name="author" content="Ecology Theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ews</title>
+    <link rel="shortcut icon" href="{% static './images/favicon.ico' %}" type="image/x-icon">
+    <!-- Goole Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/assets/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/jquery.countdown.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assets/owl.theme.css' %}">
+    <!-- preloader css-->
+    <link rel="stylesheet" href="{% static 'css/assets/preloader.css' %}">
+    <!-- main style-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cryptonio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Preloader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<header id="header" class="header header-01">
+    <!-- START Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-faded cripto_nav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" data-scroll href="index-03.html"><img src="{% static './images/logo.png' %}" alt="logo"></a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a data-scroll href="#header" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a data-scroll href="#about_cryptonic" class="nav-link">About</a></li>
+                    <li class="nav-item"><a data-scroll href="#countdown-area" class="nav-link">Token Sale</a></li>
+                    <li class="nav-item"><a data-scroll href="#roadmap" class="nav-link">Roadmap</a></li>
+                    <li class="nav-item"><a data-scroll href="#team_membar" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a data-scroll href="#faq-area" class="nav-link">Faq</a></li>
+                    <li class="nav-item"><a data-scroll href="{% url 'ews_app:base' %}" class="nav-link">TestinG YUT</a></li>
+                    <li class="nav-item"><a data-scroll href="#subscribe-wrapper" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="language">
+                <a href="#" class="token">Buy token</a>
+                <div class="dropdown"><span>Eng<i class="fas fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="blog.html">Deutsch</a></li>
+                        <li><a class="dropdown-item" href="blog-post.html">Español</a></li>
+                        <li><a class="dropdown-item" href="shop.html">Spanish</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><!-- END Navbar -->
+    <div class="container">
+        <div class="row">  
+            <div class="col-sm-12  col-md-12 col-lg-7">
+                <div class="intro-text">
+                    <h1>Cryptocurrency is a Digital asset designed To work.</h1>
+                    <p>Collaboratively engineer impactful niches for business technologies dramatically recaptiualize crossunit. </p>
+                    <a href="#" class="btn btn-default btn-default-style intro_active_3 intro_btn_3">White Paper</a>
+					<a href="#" class="btn btn-default btn-default-style intro_btn_3">Try App</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-5 img-wrapper">
+                <div class="intro-img">
+                    <img src="{% static './images/banner-vector.png' %}" alt="">
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div id="particles-jsi3" class="particles"></div>  
+</header> <!-- End Header -->
+
+
+ <!-- End Benefits -->
+
+<section id="countdown-area">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2>Crowdsale ends In</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div class="countdown-wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                    <div id="countdown"></div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div id="progerss-wrapper">
+                    
+                    <div class="progress  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                        <div class="progress-bar"><span>80%</span></div>
+                        <div class="minimum_goal">
+                            <div class="progress-shpe"></div>
+                            <div class="caption">
+                                <span>Minimum Goal</span>
+                                <h3>$713.07 K USD</h3>
+                            </div>
+                        </div>
+                        <div class="heard_cap">
+                            <div class="progress-shpe"></div>
+                            <div class="caption">
+                                <span>Hard Cap</span>
+                                <h3>$900.07 K USD</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                <a href="#" class="btn btn-default btn-default-style  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4">Buy Token Now</a>
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="payment_mathod">
+                    <h3  class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Payment Method</h3>
+                    <div class="payment-options">
+                        <a href="#" class="payment-single wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                            <div class="payment-wrapper">
+                                <div class="payment-icon">
+                                    <i class="flaticon-litecoin"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="payment-single wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                            <div class="payment-wrapper">
+                                <div class="payment-icon">
+                                    <i class="flaticon-euro"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="payment-single wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                            <div class="payment-wrapper">
+                                <div class="payment-icon">
+                                    <i class="flaticon-ripple"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="payment-single wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                            <div class="payment-wrapper">
+                                <div class="payment-icon">
+                                    <i class="flaticon-cryptocurrency"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="payment-single wow fadeInUp" data-wow-duration="2s" data-wow-delay=".6s">
+                            <div class="payment-wrapper">
+                                <div class="payment-icon">
+                                   <i class="flaticon-litecoin"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </div>
+</section> <!-- End Countdown -->
+
+<section id="token_distribution" class="token_distribution">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Initial Token Distribution</h2>
+                    <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Due to the use of large computing power and artificial based on the neural network, the NRM assistant will instantly analyze user data and offer solutions for their further use.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="token_distribution_wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                    <img src="{% static './images/chart-3-01.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End token distribution -->
+
+<section id="token_funds" class="token_funds">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Token Uses of Funds</h2>
+                    <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Due to the use of large computing power and artificial based on the neural network, the NRM assistant will instantly analyze user data and offer solutions for their further use.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class="token_distribution_wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    <img src="{% static './images/chart-3-02.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End token_funds -->
+
+<section id="roadmap" class="roadmap">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Elite Whales Roadmap</h2>
+                    <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Due to the use of large computing power and artificial based on the neural network, the NRM assistant will instantly analyze user data and offer solutions for their further use.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 roadmap-area">
+                <div class="roadmap-tree">
+
+                    <div class="row roadmap-cloumn pn_reverse  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                        <div class="roadmap-marker"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc  roadmap-dese-left">
+                            <div class="doc-wraper">
+                                <h4>Team Formation</h4>
+                                <h4>Liquidity Provision on Pancakeswap.</h4>
+                                <h4>Social Media Handles Creation</h4>
+                                <h4>200 Asset Holders</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-right">
+                            <span>Q1</span><span>2023</span>
+                        </div>
+                    </div><!-- Ends: .row -->
+
+                    <div class="row roadmap-cloumn wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                        <div class="roadmap-marker marker-off"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-left">
+                            <span>Q2</span><span> 2023</span>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-right">
+                            <div class="doc-wraper">
+                                <h4>Website Release.</h4>
+                                <h4>Launch of Whales DEX.</h4>
+                                <h4>500 Asset Holders</h4>
+                                <h4>Campaign 1.0.</h4>
+                                <h4>Partnership and Marketing.</h4>
+                            </div>
+                        </div>
+                    </div><!-- Ends: .row -->
+
+                    <div class="row roadmap-cloumn pn_reverse  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                        <div class="roadmap-marker"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-left">
+                            <div class="doc-wraper">
+                                <h4>Campaign 2.0</h4>
+                                <h4>Liquidity Provision on other Dexes</h4>
+                                <h4>Whales DAO creation</h4>
+                                <h4>5000 Asset Holders</h4>
+                                <h4>Whales Staking dApp</h4>
+                                <h4> More Partnership and Marketing.</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-right">
+                            <span>Q3</span><span> 2023</span>
+                        </div>
+                    </div><!-- Ends: .row -->
+
+                    <div class="row roadmap-cloumn  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <div class="roadmap-marker marker-off"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-left">
+                            <span>Q4</span><span> 2023</span>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-right">
+                            <div class="doc-wraper">
+                                <h4>Elites Connect - First Connecting<br/> Freelancing App built on the <br/> Blockchain.</h4>
+                                <h4>First Charity Donation</h4>
+                                <h4>Campaign 3.0</h4>
+                                <h4>Listing on Coin Market Cap and <br/> Coin Gecko.</h4>
+                            </div>
+                        </div>
+                    </div><!-- Ends: .row -->
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section> <!-- End roadmap -->
+
+<section id="team_membar" class="team_membar">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Meet Our Team Member</h2>
+                    <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Due to the use of large computing power and artificial based on the neural network, the NRM assistant will instantly analyze user data and offer solutions for their further use.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row single-row">
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-01.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Ariyan Rovert</h4>
+                                <span>Ceo & Co-Founder</span>
+                            </div>
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-02.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>David Martin</h4>
+                                <span>Co-Founder & Team Lead</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-03.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Reena Scot</h4>
+                                <span>Team Lead</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-04.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Paul Smith</h4>
+                                <span>Co-Founder</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div> 
+
+        <div class="row single-row">
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-01.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Ariyan Rovert</h4>
+                                <span>Ceo & Co-Founde</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-02.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>David Martin</h4>
+                                <span>Founder</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-03.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Reena Scot</h4>
+                                <span>Ceo & Co-Founde</span>
+                            </div>                            
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-3 single-wrapper">
+                <div class="team-single-item  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                    <figure>
+                        <div class="member-img">
+                            <img src="{% static './images/team/team-04.jpg" alt="member img" class="img-fluid">
+                        </div>
+                        <figcaption>
+                            <div class="member-name">
+                                <h4>Paul Smith</h4>
+                                <span>Co-Founde</span>
+                            </div>
+                            <ul class="social-links list-unstyled">
+                                <li class="nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>  <!-- End team_membar -->
+
+<section id="logos" class="logos">
+    <div class="container">
+        <div class="row">        
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Cryptonio As Seen On</h2>
+                    <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Due to the use of large computing power and artificial based on the neural network, the NRM assistant will instantly analyze user data and offer solutions for their further use.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 roadmap-area">
+                
+                <div class="companis-logo-wapper">
+                    <ul class="companis-logos  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                        <li><img src="{% static './images/logos/partner6-1.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-2.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-3.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-4.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-5.png' %}" alt=""></li>
+                    </ul>
+                    <ul class="companis-logos  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                        <li><img src="{% static './images/logos/partner6-6.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-7.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-8.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-1.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-2.png' %}" alt=""></li>
+                    </ul>
+                    <ul class="companis-logos  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                        <li><img src="{% static './images/logos/partner6-3.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-4.png' %}" alt=""></li>
+                        <li><img src="{% static './images/logos/partner6-5.png' %}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>  <!-- End logos -->
+
+<section id="faq-area" class="faq-area">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-10">
+                <div class="faq-wrapper">
+                    <div class="sub-title">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                    <div id="accordion">
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                            <div class="card-header" id="heading-1">
+                                <a data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                    What cryptocurrencies can I use to purchase?
+                                </a>
+                            </div>
+                            <div id="collapse-1" class="collapse show" data-parent="#accordion" aria-labelledby="heading-1">
+                                <div class="card-body">
+                                    Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis and comparison of neurons in which will be self-corrected, based on the history of success and failure, taking into account the correlation of the objects of analysis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                            <div class="card-header" id="heading-2">
+                                <a data-toggle="collapse" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                                    How do I benefit from the ICO Token?
+                                </a>
+                            </div>
+                            <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                                 <div class="card-body">
+                                    Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis and comparison of neurons in which will be self-corrected, based on the history of success and failure, taking into account the correlation of the objects of analysis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                            <div class="card-header" id="heading-4">
+                                <a data-toggle="collapse" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+                                    To Keep Makeup Looking Fresh Take A Powder
+                                </a>
+                            </div>
+                            <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+                                <div class="card-body">
+                                    Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis and comparison of neurons in which will be self-corrected, based on the history of success and failure, taking into account the correlation of the objects of analysis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                            <div class="card-header" id="heading-5">
+                                <a data-toggle="collapse" href="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+                                    What Curling Irons Are The Best Ones
+                                </a>
+                            </div>
+                            <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+                                <div class="card-body">
+                                    Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis and comparison of neurons in which will be self-corrected, based on the history of success and failure, taking into account the correlation of the objects of analysis.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End faq-area -->
+
+<section id="subscribe-wrapper">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10 mx-auto">
+            <div id="subscribe" class="subscribe">
+                <div class="subscribe-form">
+                    <div class="sub-title">
+                        <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Subscribe For Token Sale Update</h2>
+                    </div>
+                    <form action="#">
+                        <div class="form-group  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                            <input placeholder="Enter Your E-mail" type="email" required="">
+                            <button type="submit" class="text-center">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="subscribe-social">
+                    <ul class="social-items list-unstyled">
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s"><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s"><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s"><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s"><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".6s"><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s"><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
+                        <li class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".8s"><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+		</div>
+    </div>
+</section> <!-- End subscribe -->
+
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row footer-btm-wrapper">
+            <div class="col-12  col-sm-6 col-md-12 col-lg-6 footer-single-col">
+                <h3 class="subtitle_1">&nbsp;<img src="{% static './images/logo.png' %}" alt=""></h3>
+                <p>All of our website templates are offered as is, we do not offer any guarantee or warranty website templates are offered as is, we do not offer any guarantee or warranty.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-single-col">
+                <h3 class="subtitle_1">Company</h3> 
+                <ul class="list-unstyled">
+                    <li><a href="#">About Company</a></li>
+                    <li><a href="#">Feature Product</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-single-col">
+                <h3 class="subtitle_1">Help Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Support Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-single-col">
+                <h3 class="subtitle_1">Product</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#">Wordpres</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Other Product</a></li>
+                </ul>
+            </div>  
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2020, Designed By <span>Ecology Theme</span></p>            
+        </div>         
+    </div>      
+</footer><!-- ./ End Footer Area-->
+
+    <!-- JavaScript Files -->
+    <script src="{% static 'js/assets/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/assets/popper.min.js' %}"></script>
+    <script src="{% static 'js/assets/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/assets/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/assets/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/assets/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/assets/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/assets/owl.carousel.min.js' %}"></script>     
+    <script src="{% static 'js/assets/jquery.downCount2.js' %}"></script>
+    <script src="{% static 'js/assets/wow.min.js' %}"></script>  
+    <script src="{% static 'js/assets/particles.js' %}"></script>
+    <script src="{% static 'js/assets/app3.js' %}"></script>  
+    <script src="{% static 'js/assets/smooth-scroll.js' %}"></script>   
+    <script src="{% static 'js/assets/wow.min.js' %}"></script>          
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

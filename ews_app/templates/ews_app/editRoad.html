@@ -1,0 +1,60 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1> EDIT ROAD MAP</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+          <li class="breadcrumb-item">COMPONENTS</li>
+          <li class="breadcrumb-item active"> EDIT ROAD MAP</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-8">
+
+                {% if user.is_authenticated %}
+                <h4 class="text-center" style="color: blue; font-weight: 700;">EDIT ROAD MAP  to Database</h4>
+
+                    <br><br>
+                    {% if submitted %}
+                        The ROAD MAP was submitted Successfully
+                    {% else %}
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="row mb-3">
+                              <label for="" class="col-sm-2 col-form-label">TITLE</label>
+                              <div class="col-sm-10">
+                                <input type="text" name="title" value="{{rm.title}}" class="form-control" >
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="" class="col-sm-2 col-form-label">Answer</label>
+                              <div class="col-sm-10">
+                                  <textarea  name="speech" class="form-control" placeholder="Enter a Speech Here" rows="7"  > {{rm.speech}} </textarea>
+                              </div>
+                            </div>
+
+
+                        <center> <input type="submit" class="btn btn-warning col-6 " value="UPDATE"></center>
+                        </form>
+                        <hr>
+                        <br><br><br>
+                        <hr>
+                    {% endif %}
+                {% else %}
+                <p>You are not allowed here</p>
+            </div>
+        {% endif %}
+        </div>
+
+    </section>
+</main>
+
+
+{% endblock content %}

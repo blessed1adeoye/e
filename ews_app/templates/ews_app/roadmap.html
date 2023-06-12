@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="roadmap" class="roadmap">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    {% for s in rm %}
+                        <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">{{s.title}}.</h2>
+                        <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">{{s.speech}}.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 roadmap-area">
+                <div class="roadmap-tree">
+                    <div class="row roadmap-cloumn pn_reverse  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                            <div class="roadmap-marker"></div>
+                        {% for w in rmr1 %}
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc  roadmap-dese-left">
+                                <div class="doc-wraper">
+
+                                    {% if w.hone %}
+                                        <h4>{{w.hone|safe}}.</h4>
+                                    {% endif %}
+                                    {% if w.h_two %}
+                                        <h4>{{w.h_two|safe}}.</h4>
+                                    {% endif %}
+                                    {% if w.h_three %}
+                                        <h4>{{w.h_three|safe}}.</h4>
+                                    {% endif %}
+                                    {% if w.h_four %}
+                                        <h4>{{w.h_four|safe}}.</h4>
+                                    {% endif %}
+                                    {% if w.h_five %}
+                                        <h4>{{w.h_five|safe}}.</h4>
+                                    {% endif %}
+                                    {% if w.h_six %}
+                                        <h4>{{w.h_six|safe}}.</h4>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-right">
+                                <span>{{w.Quarter|safe}}.</span><span>{{w.year|safe}}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Ends: .row -->
+
+
+                    <div class="row roadmap-cloumn wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+
+                            <div class="roadmap-marker marker-off"></div>
+                        {% for x in rml1 %}
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-left">
+                                <span>{{x.Quarter|safe}}</span><span> {{x.year}}</span>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-right">
+                                <div class="doc-wraper">
+                                    {% if x.hone %}
+                                        <h4>{{x.hone|safe}}.</h4>
+                                    {% endif %}
+                                    {% if x.h_two %}
+                                        <h4>{{x.h_two|safe}}.</h4>
+                                    {% endif %}
+                                    {% if x.h_three %}
+                                        <h4>{{x.h_three|safe}}.</h4>
+                                    {% endif %}
+                                    {% if x.h_four %}
+                                        <h4>{{x.h_four|safe}}.</h4>
+                                    {% endif %}
+                                    {% if x.h_five %}
+                                        <h4>{{x.h_five|safe}}.</h4>
+                                    {% endif %}
+                                    {% if x.h_six %}
+                                        <h4>{{x.h_six|safe}}.</h4>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div><!-- Ends: .row -->
+
+
+                    <div class="row roadmap-cloumn pn_reverse  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+
+                            <div class="roadmap-marker"></div>
+                        {% for c in rmr2 %}
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-left">
+                                <div class="doc-wraper">
+                                    {% if c.hone %}
+                                        <h4>{{c.hone|safe}}.</h4>
+                                    {% endif %}
+                                    {% if c.h_two %}
+                                        <h4>{{c.h_two|safe}}.</h4>
+                                    {% endif %}
+                                    {% if c.h_three %}
+                                        <h4>{{c.h_three|safe}}.</h4>
+                                    {% endif %}
+                                    {% if c.h_four %}
+                                        <h4>{{c.h_four|safe}}.</h4>
+                                    {% endif %}
+                                    {% if c.h_five %}
+                                        <h4>{{c.h_five|safe}}.</h4>
+                                    {% endif %}
+                                    {% if c.h_six %}
+                                        <h4>{{c.h_six|safe}}.</h4>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-right">
+                                <span>{{c.Quarter}}</span><span> {{c.year}}</span>
+                            </div>
+                        {% endfor %}
+                    </div><!-- Ends: .row -->
+
+                    <div class="row roadmap-cloumn  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+
+                            <div class="roadmap-marker marker-off"></div>
+                        {% for b in rml2 %}
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-status roadmap-left">
+                                <span>{{b.Quarter}}</span><span> {{b.year}}</span>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 roadmap-desc roadmap-dese-right">
+                                <div class="doc-wraper">
+                                    {% if b.hone %}
+                                        <h4>{{b.hone|safe}}.</h4>
+                                    {% endif %}
+                                    {% if b.h_two %}
+                                        <h4>{{b.h_two|safe}}.</h4>
+                                    {% endif %}
+                                    {% if b.h_three %}
+                                        <h4>{{b.h_three|safe}}.</h4>
+                                    {% endif %}
+                                    {% if b.h_four %}
+                                        <h4>{{b.h_four|safe}}.</h4>
+                                    {% endif %}
+                                    {% if b.h_five %}
+                                        <h4>{{b.h_five|safe}}.</h4>
+                                    {% endif %}
+                                    {% if b.h_six %}
+                                        <h4>{{b.h_six|safe}}.</h4>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div><!-- Ends: .row -->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+
+{% endblock content %}

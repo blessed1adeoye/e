@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="faq-area" class="faq-area">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-10">
+                <div class="faq-wrapper">
+                    <div class="sub-title">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                    <div id="accordion">
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                            <div class="card-header" id="heading-1">
+                                <a data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                    What is EWS?
+                                </a>
+                            </div>
+                            <div id="collapse-1" class="collapse show" data-parent="#accordion" aria-labelledby="heading-1">
+                                <div class="card-body">
+                                    EWS is a deflationary educational-meme token that provides theoretical courses and practical executions within the overall cryptocurrency ecosystem. we are committed to education, knowledge, charity-supporting the care and conservative efforts towards the Whales of the oceans. the EWS DAO reserves a share of the token to support the conservation of these extincting majestic creatures.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                            <div class="card-header" id="heading-2">
+                                <a data-toggle="collapse" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                                    How does EWS work?
+                                </a>
+                            </div>
+                            <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                                 <div class="card-body">
+                                 EWS is a decentralized cryptocurrency that operates on the Binance Smart Chain. It is designed to be deflationary, which means that the total supply of tokens will decrease over time. This is achieved through a mechanism called token burning, where a portion of the tokens are permanently removed from circulation. This will boost demand and rapidly increase market value.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                            <div class="card-header" id="heading-4">
+                                <a data-toggle="collapse" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+                                    How can I purchase EWS tokens?
+                                </a>
+                            </div>
+                            <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+                                <div class="card-body">
+                                    You can purchase EWS tokens on decentralized exchanges (DEXs) such as Pancakeswap, Boggedfinance, and Poocoin, please note that the value of EWS tokens may flunctuate, and its important to do your own research and invest wisely.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                            <div class="card-header" id="heading-5">
+                                <a data-toggle="collapse" href="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+                                    How can I store EWS tokens?
+                                </a>
+                            </div>
+                            <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+                                <div class="card-body">
+                                    You can store EWS tokens in any BSC-compatible wallet that supports BEP20. Some popular options include Trust wallet, MetaMask, Safepal etc. It is important to keep your private keys safe, secure and never share them with anyone.                       
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End faq-area -->
+
+
+{% endblock content %}

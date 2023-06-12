@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="token_funds" class="token_funds" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="sub-title">
+                    {% for t in tk %}
+                        <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">{{t.title}}</h2>
+                        <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">{{t.speech}}.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class="token_distribution_wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    
+                        <video controls autoplay src="../static/1.mp4"  width="320" ></video>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+{% endblock content %}
+

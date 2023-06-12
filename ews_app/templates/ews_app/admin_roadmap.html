@@ -1,0 +1,172 @@
+{% extends 'ews_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+
+  <div class="pagetitle">
+    <h1>ROAD MAP</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'ews_app:ad-hm' %}">Home</a></li>
+        <li class="breadcrumb-item">COMPONENTS</li>
+        <li class="breadcrumb-item active">ROAD MAP</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="text-center" style="color: gold; font-weight: 700;">INTRODUCTION</h5>
+        {% for x in rm %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">{{x.title}}</h5>
+            <p>{{x.speech}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'ews_app:edit_create_map' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+
+                    <a href="{% url 'ews_app:delete_create_map' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create_map' %}"> CREATE ROADMAP SPEECH</a></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create_map_R' %}"> CREATE ROADMAP FIRST QUARTER</a></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create_map_L' %}"> CREATE ROADMAP SECOND QUARTER</a></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create_map_Rt' %}"> CREATE ROADMAP THIRD QUARTER</a></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'ews_app:create_map_Lt' %}"> CREATE ROADMAP FORTH QUARTER</a></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h5 class="text-center" style="color: magenta; font-weight: 700;">FIRST QUARTER </h5>
+        {% for x in rmr1 %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{x.Quarter}} - {{x.year}}</h5>
+            <p>{{x.hone}}</p>
+            <p>{{x.h_two}}</p>
+            <p>{{x.h_three}}</p>
+            <p>{{x.h_four}}</p>
+            <p>{{x.h_five}}</p>
+            <p>{{x.h_six}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+                    <a href="{% url 'ews_app:edit_create_map_R' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+                    <a href="{% url 'ews_app:delete_road_map_R' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-lg-6">
+        <h5 class="text-center" style="color: green; font-weight: 700;">SECOND QUARTER</h5>
+        {% for x in rml1 %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">{{x.Quarter}} - {{x.year}}</h5>
+            <p>{{x.hone}}</p>
+            <p>{{x.h_two}}</p>
+            <p>{{x.h_three}}</p>
+            <p>{{x.h_four}}</p>
+            <p>{{x.h_five}}</p>
+            <p>{{x.h_six}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'ews_app:edit_create_map_L' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+
+                    <a href="{% url 'ews_app:delete_road_map_L' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-lg-6">
+        <h5 class="text-center" style="color: magenta; font-weight: 700;">THIRD QUARTER</h5>
+        {% for x in rmr2 %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{x.Quarter}} - {{x.year}}</h5>
+            <p>{{x.hone}}</p>
+            <p>{{x.h_two}}</p>
+            <p>{{x.h_three}}</p>
+            <p>{{x.h_four}}</p>
+            <p>{{x.h_five}}</p>
+            <p>{{x.h_six}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'ews_app:edit_create_map_Rt' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+
+                    <a href="{% url 'ews_app:delete_road_map_Rt' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-lg-6">
+        <h5 class="text-center" style="color: green; font-weight: 700;">FORTH QUARTER</h5>
+        {% for x in rml2 %}
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">{{x.Quarter}} - {{x.year}}</h5>
+            <p>{{x.hone}}</p>
+            <p>{{x.h_two}}</p>
+            <p>{{x.h_three}}</p>
+            <p>{{x.h_four}}</p>
+            <p>{{x.h_five}}</p>
+            <p>{{x.h_six}}</p>
+            <!-- Default Table -->
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'ews_app:edit_create_map_Lt' x.id %}" class="btn btn-success mr-15">UPDATE</a>
+
+                    <a href="{% url 'ews_app:delete_road_map_Lt' x.id %}" class="btn btn-danger">DELETE</a>
+                {% endif %}
+            <!-- End Default Table Example -->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}
